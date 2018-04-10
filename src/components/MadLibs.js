@@ -13,7 +13,7 @@ class MadLibs extends Component {
   };
 
   getNewMadlib = () => {
-    fetch("https://madlibz.herokuapp.com/api/random?minlength=8&maxlength=25").then((res) => {
+    fetch("http://madlibz.herokuapp.com/api/random?minlength=8&maxlength=25").then((res) => {
     res.json().then((madLib) => {
       console.log(madLib);
       this.setState({title: madLib.title, blanks: madLib.blanks, value: madLib.value, storyGenerated: false})
@@ -57,7 +57,7 @@ class MadLibs extends Component {
 
   renderBlanks = () => {
     if(this.state.storyGenerated){
-      return null
+      return <h2>PLEASE BE PATIENT AS THE API CALL SOMETIMES TAKES 100 YEARS</h2>
     }
     return (
       <div className = 'madForm'>
