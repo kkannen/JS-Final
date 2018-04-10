@@ -13,7 +13,7 @@ class MadLibs extends Component {
   };
 
   getNewMadlib = () => {
-    fetch("http://madlibz.herokuapp.com/api/random?minlength=8&maxlength=25").then((res) => {
+    fetch("https://madlibz.herokuapp.com/api/random?minlength=8&maxlength=25").then((res) => {
     res.json().then((madLib) => {
       console.log(madLib);
       this.setState({title: madLib.title, blanks: madLib.blanks, value: madLib.value, storyGenerated: false})
