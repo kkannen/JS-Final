@@ -75,6 +75,7 @@ class App extends Component {
        justifyContent: 'space-around',
        paddingTop:200,
        color:'#22374',
+       alignItems: 'center',
      }
      return (
        <div className = 'buttons' style={buttonStyle}>
