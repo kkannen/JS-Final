@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+button {
+  height: 65px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eeea;
+  color: #223749;
+  font-weight: bold;
+  font-size: 1.15em;
+  transition: 100ms;
+  max-width: 20vw;
+  min-width: 250px;
+  margin: 7px;
+}
+
+button:hover {
+  background-color: #eeed;
+  box-shadow: 0px 0px 30px #eee;
+}
+
+input {
+  height: 30px;
+  width: 20vw;
+  margin: 8px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 2px;
+  color: black
+}
+
+::placeholder {
+  font-weight: bold;
+  color: #372E2D;
+}

@@ -1,0 +1,56 @@
+.tictac {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.game {
+margin-top: 15px;
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #272727;
+font-weight: bold;
+background-color: #eee6;
+width:80%;
+border-radius: 10px;
+margin-left: 10%;
+}
+
+.row {
+  display: flex;
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  background-color: #ddd9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+}
+
+.box:hover {
+  background-color: #eee;
+}
+
+.reset {
+  margin: 15px;
+  height: 50px;
+  width: 300px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #272727;
+}
+
+.ticTacTitle {
+  font-size: 75px;
+}
+
+.message {
+  margin: 15px;
+  font-size: 35px;
+  font-weight: bold;
+}

@@ -1,0 +1,25 @@
+
+.madForm {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee8;
+  width:80%;
+  margin: 50px 10%;
+  padding: 30px
+}
+
+.story{
+    background-color: #eeea;
+    width:80%;
+    margin: 50px 10%;
+    padding: 30px;
+    color: #372E2D;
+    font-size: 1.5em;
+    font-weight: bold
+}
+
+.storySection {
+  display: inline-block;
+}

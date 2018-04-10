@@ -1,0 +1,25 @@
+.pigLatin {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container {
+  height: 50vh;
+  width: 40%;
+  background-color: #eeeeee77;
+  float: right;
+  margin: 5vh 5% 5vh 0px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px #322D28;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pigButton{
+  width: 20vw;
+  min-width: 130px;
+
+}
