@@ -57,15 +57,18 @@ class MadLibs extends Component {
 
   renderBlanks = () => {
     if(this.state.storyGenerated){
+      return null;
+    } else if (!this.state.blanks.length){
       return <h2>PLEASE BE PATIENT AS THE API CALL SOMETIMES TAKES 100 YEARS</h2>
+    } else {
+      return (
+        <div className = 'madForm'>
+          {this.state.blanks.map((blank, key) => {
+            return <input className="blanks" key={key} placeholder={blank} onChange={(e)=>this.handleEnterWord(e, key)}/>
+          })}
+        </div>
+      )
     }
-    return (
-      <div className = 'madForm'>
-        {this.state.blanks.map((blank, key) => {
-          return <input className="blanks" key={key} placeholder={blank} onChange={(e)=>this.handleEnterWord(e, key)}/>
-        })}
-      </div>
-    )
   }
 
 
