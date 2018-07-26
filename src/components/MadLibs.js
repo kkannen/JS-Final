@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../stylesheets/madlibs.css'
+import CornerMenu from './CornerMenu';
 
 class MadLibs extends Component {
 
@@ -59,13 +60,22 @@ class MadLibs extends Component {
     if(this.state.storyGenerated){
       return null;
     } else if (!this.state.blanks.length){
-      return <h2>PLEASE BE PATIENT AS THE API CALL SOMETIMES TAKES 100 YEARS</h2>
+      return (
+        <div>
+          <h1>Mad Libs</h1>
+          <h2>PLEASE BE PATIENT AS THE API CALL SOMETIMES TAKES 100 YEARS</h2>
+        </div>
+      )
     } else {
       return (
-        <div className = 'madForm'>
-          {this.state.blanks.map((blank, key) => {
-            return <input className="blanks" key={key} placeholder={blank} onChange={(e)=>this.handleEnterWord(e, key)}/>
-          })}
+        <div style={{backgroundColor:'#eee8', paddingTop: "1em", marginLeft: "5%", width: "90%", position:"relative"}}>
+          <CornerMenu/>
+          <h1>Mad Libs</h1>
+          <div className='madForm'>
+            {this.state.blanks.map((blank, key) => {
+              return <input className="blanks" key={key} placeholder={blank} onChange={(e)=>this.handleEnterWord(e, key)}/>
+            })}
+          </div>
         </div>
       )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../stylesheets/TicTac.css'
+import CornerMenu from './CornerMenu';
 
 class TicTac extends Component {
   constructor (props) {
@@ -29,7 +30,7 @@ class TicTac extends Component {
 
   diagonalWin = () => {
     return (
-      (this.state.board.every((rowArr, index) => rowArr[rowArr[index]] === this.state.playerTurn)) ||
+      (this.state.board.every((rowArr, index) => rowArr[index] === this.state.playerTurn)) ||
       (this.state.board[0][2] === this.state.playerTurn && this.state.board[1][1] === this.state.playerTurn && this.state.board[2][0] === this.state.playerTurn)
     )
   }
@@ -74,6 +75,7 @@ class TicTac extends Component {
     return (
       <div className = 'tictac'>
         <div className = 'game'>
+          <CornerMenu/>
           <h1 className='ticTacTitle'>Tic-Tac-Toe</h1>
           <div>{this.renderRows()}</div>
           <button className = 'reset' onClick = {this.handleResetBoard}>START NEW GAME</button>

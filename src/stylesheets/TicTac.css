@@ -2,19 +2,20 @@
   height: 100vh;
   width: 100%;
   background-size: cover;
+  background-image: url("../images/confetti.jpg");
+  padding-top: 30px;
 }
 
 .game {
-margin-top: 15px;
-display: flex;
-flex-direction: column;
-align-items: center;
-color: #272727;
-font-weight: bold;
-background-color: #eee6;
-width:80%;
-border-radius: 10px;
-margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #272727;
+  font-weight: bold;
+  background-color: #eee8;
+  width:80%;
+  margin-left: 10%;
+  position: relative;
 }
 
 .row {
@@ -22,10 +23,10 @@ margin-left: 10%;
 }
 
 .box {
-  height: 150px;
-  width: 150px;
+  height: 115px;
+  width: 115px;
   margin: 5px;
-  background-color: #ddd9;
+  background-color: #dddddddd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +47,7 @@ margin-left: 10%;
 }
 
 .ticTacTitle {
-  font-size: 75px;
+  font-size: 50px;
 }
 
 .message {

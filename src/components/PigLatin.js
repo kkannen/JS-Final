@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../stylesheets/PigLatin.css';
+import CornerMenu from './CornerMenu';
 
 class PigLatin extends Component {
   state = {
@@ -19,7 +20,7 @@ class PigLatin extends Component {
     } else {
       const firstVowel = letters.findIndex(letter => vowels.includes(letter));
       const firstLetters = (letters.splice(0, firstVowel)).join('')
-      const translatedWordAsArr = letters.push(firstLetters + 'ay')
+      letters.push(firstLetters + 'ay')
       const translatedWord = letters.join('')
       return(translatedWord)
     }
@@ -34,8 +35,6 @@ class PigLatin extends Component {
   }
 
   handleTranslate = () => {
-    console.log('click')
-    const clicked = this.state.clicked
     const translated = this.state.translatedPhrase
     this.setState({clicked: true, renderedText: translated});
   }
@@ -51,13 +50,13 @@ class PigLatin extends Component {
     return (
       <div className="pigLatin">
         <div className='container'>
+          <CornerMenu/>
           <h2>PIG LATIN TRANSLATOR</h2>
           <input className = 'pigLatinInput' onChange = {this.sentenceTranslator}></input>
           <button className='pigButton' onClick = {this.handleTranslate}>TRANSLATE</button>
           {this.renderTranslated()}
         </div>
-
-      </div>
+T      </div>
     );
   }
 }
